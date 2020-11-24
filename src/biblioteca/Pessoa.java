@@ -8,14 +8,17 @@ public class Pessoa {
 	private String periodo;
 	private int quantidadeEmprestimo;
 	
-	public Pessoa(String cpf, String nome, String sobrenome, int idade, String periodo, int quantidadeEmprestimo) {
+	public Pessoa() {
+		
+	}
+	public Pessoa(String cpf, String nome, String sobrenome, int idade, String periodo) {
 		//super();
 		this.cpf = cpf;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.idade = idade;
 		this.periodo = periodo;
-		this.quantidadeEmprestimo = quantidadeEmprestimo;
+		this.quantidadeEmprestimo = 1;
 	}
 	
 	public String getCpf() {
@@ -51,14 +54,11 @@ public class Pessoa {
 	public int getQuantidadeEmprestimo() {
 		return quantidadeEmprestimo;
 	}
-	public void setQuantidadeEmprestimo(int quantidadeEmprestimo) {
-		this.quantidadeEmprestimo = quantidadeEmprestimo;
-	}
 	
-	public String emprestarLivro(int emprestimo) {
+	public String emprestarLivro() {
 		if(this.quantidadeEmprestimo>0) {
-			this.quantidadeEmprestimo -= emprestimo;
-			return "Livro reservado com sucesso!";
+			this.quantidadeEmprestimo -= 1;
+			return "Livro emprestado com sucesso! Você ainda pode emprestar "+this.getQuantidadeEmprestimo() + " livros.";
 		}
 		else {
 			return "Quantidade de emprestimo indisponível.";

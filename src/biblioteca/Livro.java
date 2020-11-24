@@ -7,10 +7,14 @@ public class Livro {
 	private String autor;
 	private int quantidadePaginas;
 	private int quantidadeLivro;
-	private boolean disponível;
+	private boolean disponivel;
 	
+	public Livro() {
+		
+	}
+
 	public Livro(String titulo, String editora, int anoPublicacao, String autor, int quantidadePaginas,
-			int quantidadeLivro, boolean disponível) {
+			int quantidadeLivro, boolean disponivel) {
 		super();
 		this.titulo = titulo;
 		this.editora = editora;
@@ -18,8 +22,9 @@ public class Livro {
 		this.autor = autor;
 		this.quantidadePaginas = quantidadePaginas;
 		this.quantidadeLivro = quantidadeLivro;
-		this.disponível = disponível;
+		this.disponivel = disponivel;
 	}
+
 
 	public String getTitulo() {
 		return titulo;
@@ -69,19 +74,20 @@ public class Livro {
 		this.quantidadeLivro = quantidadeLivro;
 	}
 
-	public boolean isDisponível() {
-		return disponível;
+	public boolean isDisponivel() {
+		return disponivel;
 	}
 
-	public void setDisponível(boolean disponível) {
-		this.disponível = disponível;
+	public void setDisponivel(boolean disponivel) {
+		this.disponivel = disponivel;
 	}
 
 	@Override
 	public String toString() {
-		return "Livro [titulo=" + titulo + ", disponível=" + disponível + "]";
+		return "Livro [titulo=" + titulo + ", editora=" + editora + ", anoPublicacao=" + anoPublicacao + ", autor="
+				+ autor + ", quantidadePaginas=" + quantidadePaginas + ", quantidadeLivro=" + quantidadeLivro
+				+ ", disponivel=" + disponivel + "]";
 	}
-	
 	
 
 }
