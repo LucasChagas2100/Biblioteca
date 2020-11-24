@@ -2,32 +2,34 @@ package biblioteca;
 
 public class Aluno extends Pessoa {
 
+	public Aluno() {
+		
+	}
 	
-	
-	public Aluno(String cpf, String nome, String sobrenome, int idade, String periodo, int quantidadeEmprestimo,
-			long registroAluno, int serie) {
-		super(cpf, nome, sobrenome, idade, periodo, quantidadeEmprestimo);
+	public Aluno(String cpf, String nome, String sobrenome, int idade, String periodo,
+			String registroAluno, String serie) {
+		super(cpf, nome, sobrenome, idade, periodo);
 		this.registroAluno = registroAluno;
 		this.serie = serie;
 	}
 
-	private long registroAluno;
-	private int serie;
+	private String registroAluno;
+	private String serie;
 	
 
-	public long getRegistroAluno() {
+	public String getRegistroAluno() {
 		return registroAluno;
 	}
 
-	public void setRegistroAluno(long registroAluno) {
+	public void setRegistroAluno(String registroAluno) {
 		this.registroAluno = registroAluno;
 	}
 
-	public int getSerie() {
+	public String getSerie() {
 		return serie;
 	}
 
-	public void setSerie(int serie) {
+	public void setSerie(String serie) {
 		this.serie = serie;
 	}
 
