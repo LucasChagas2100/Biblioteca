@@ -1,5 +1,7 @@
 package biblioteca;
 
+import java.util.Scanner;
+
 public class Principal {
 	public static void main(String[] args) {
 		int opcao = -1;
@@ -7,6 +9,8 @@ public class Principal {
 		while(opcao!=0) {
 			
 		}
+		
+		Scanner read = new Scanner(System.in);
 		
 	}
 }
