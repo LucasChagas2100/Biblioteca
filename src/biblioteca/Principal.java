@@ -4,16 +4,8 @@ import java.util.Scanner;
 
 public class Principal {
 	public static void main(String[] args) {
-<<<<<<< HEAD
 		int opcao = -1;
-		
-		while(opcao!=0) {
-			
-		}
-		
-=======
 
->>>>>>> 3ca2cdafe3f72378f29df5c40238e70742cd38f6
 		Scanner read = new Scanner(System.in);
 
 		// Objetos
@@ -22,8 +14,6 @@ public class Principal {
 		Livro livro2 = new Livro("Rosas", "Artica", 2013, "Fernando Pessoa", 500, 1, true);
 
 		Aluno aluno = new Aluno("4123234234", "Lucas", "Chagas", 24, "Noturno", "1234", "Terceiro");
-
-		int opcao = -1;
 
 		// Iniciando o Menu
 
