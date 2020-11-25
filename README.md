@@ -1,3 +1,3 @@
 # Biblioteca
 
-<img align="center" src="Classes.png">
+<img align="center" src="Classes.gif">
