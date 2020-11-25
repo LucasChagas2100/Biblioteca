@@ -65,9 +65,9 @@ public class Pessoa {
 		}
 	}
 	
-	public String devolverLivro(int emprestimo) {
-		this.quantidadeEmprestimo += emprestimo;
-		return "Livro devolvido com sucesso. A quantidade de empréstimos disponíveis é "+this.quantidadeEmprestimo;
+	public String devolverLivro() {
+		this.quantidadeEmprestimo += 1;
+		return "Livro devolvido com sucesso. A quantidade de empréstimos disponíveis é igual a "+this.quantidadeEmprestimo +".";
 	}
 	
 }

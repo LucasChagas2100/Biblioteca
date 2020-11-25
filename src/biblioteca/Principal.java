@@ -20,17 +20,18 @@ public class Principal {
 		Livro livro = new Livro("Guia Java", "Saraiva", 2000, "Tom Jobim", 250, 4, true);
 		Livro livro1 = new Livro("Guia Python", "Saraiva", 2010, "Thais Jabm", 100, 2, true);
 		Livro livro2 = new Livro("Rosas", "Artica", 2013, "Fernando Pessoa", 500, 1, true);
-		
+
 		Aluno aluno = new Aluno("4123234234", "Lucas", "Chagas", 24, "Noturno", "1234", "Terceiro");
+
 		int opcao = -1;
-	
 
 		// Iniciando o Menu
 
 		while (opcao != 0) {
 			System.out.println("\n\n\n**** MENU PRINCIPAL ****");
 			System.out.println("\nDigite a opção de acesso: ");
-			System.out.println("1. Cadastrar Aluno\n2. Cadastrar Livro \n3. Emprestar Livro \n0. Sair ");
+			System.out.println(
+					"1. Cadastrar Aluno\n2. Cadastrar Livro \n3. Emprestar Livro \n4. Devolver Livro \n0. Sair ");
 			opcao = read.nextInt();
 
 			switch (opcao) {
@@ -50,6 +51,7 @@ public class Principal {
 				System.out.println("Registro: ");
 				aluno.setRegistroAluno(read.next());
 				System.out.println("Cadastrado com Sucesso !");
+
 				break;
 			case 2:
 				System.out.println("Título");
@@ -67,7 +69,7 @@ public class Principal {
 				livro.setDisponivel(true);
 				System.out.println("Cadastrado com Sucesso !");
 				break;
-			case 3:		
+			case 3:
 				System.out.println("Escolha o livro: ");
 				System.out.println("1." + livro.toString());
 				System.out.println("2." + livro2.toString());
@@ -94,6 +96,14 @@ public class Principal {
 				}
 				System.out.println("\nDigite qualquer tecla + enter para voltar ao MENU...");
 				read.next();
+				break;
+			case 4:
+				System.out.println(aluno.getNome());
+				if (aluno.getQuantidadeEmprestimo() == 0) {
+					System.out.println(aluno.devolverLivro());
+				} else {
+					System.out.println("Não há livros a devolver.");
+				}
 				break;
 			case 0:
 				System.out.println("Saindo...");
